@@ -1,25 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidor Alvo - Experimento TCC</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solari4tack — Teste</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
-    <header>
-        <h1>Laboratório de Segurança de Redes</h1>
-        <p>Alvo do Experimento: Comportamento IPS vs DDoS</p>
-    </header>
-    <main>
-        <section class="status-box">
-            <h2>Status do Servidor</h2>
-            <div id="status-indicator">ON-LINE</div>
-            <p>Este servidor está sendo monitorado pelo Suricata IPS.</p>
-        </section>
-    </main>
-    <footer>
-        <p>Projeto de TCC - Simulação de Ataque e Mitigação</p>
-    </footer>
+
+  <nav>
+    <div class="nav-logo">Solari4tack</div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#funcionalidades">Funcionalidades</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <span class="outline"></span><br>
+      <div class="hero-tag">Isso é um teste..</div>
+      <h1 class="hero-title">
+        SERVIDOR<br>
+        <span>TESTE</span>
+      </h1>
+      <p class="hero-sub">
+        Esta página confirma que o servidor está ativo e funcionando normalmente...
+      </p>
+      <div class="hero-cta">
+        <a href="#sobre" class="btn btn-primary">Explorar</a>
+        <a href="#funcionalidades" class="btn btn-outline">Funcionalidades</a>
+      </div>
+    </div>
+    <div class="hero-counter">01</div>
+  </section>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Apenas teste<span class="dot">✦</span></span>
+      <span class="marquee-item">Feito para Ataques<span class="dot">✦</span></span>
+      <span class="marquee-item">Integridade<span class="dot">✦</span></span>
+      <span class="marquee-item">Atack<span class="dot">✦</span></span>
+      <span class="marquee-item">Teste<span class="dot">✦</span></span>
+      <span class="marquee-item">Apache Server<span class="dot">✦</span></span>
+      <span class="marquee-item">Flask<span class="dot">✦</span></span>
+      <span class="marquee-item">Python<span class="dot">✦</span></span>
+      <span class="marquee-item">HTML5<span class="dot">✦</span></span>
+      <span class="marquee-item">CSS3<span class="dot">✦</span></span>
+      <span class="marquee-item">DDoS<span class="dot">✦</span></span>
+      <span class="marquee-item">Slowloris<span class="dot">✦</span></span>
+    </div>
+  </div>
+
+  <section id="sobre">
+    <div class="about">
+      <div class="about-visual reveal">
+        <div class="about-box">
+          <div class="about-number">02</div>
+        </div>
+        <div class="about-accent-bar"></div>
+      </div>
+      <div class="about-text">
+        <div class="section-label reveal">Sobre</div>
+        <h2 class="section-title reveal">Indicado para<br> testes de <br> Integridade.</h2>
+        <p class="reveal">
+          Este site foi criado para validar que o servidor está apresentando este site
+          e funcionando corretamente. Nenhuma lógica de backend complexa —
+          apenas uma rota limpa servindo um template HTML estático.
+        </p>
+        <p class="reveal">
+          Este site foi projetado apenas para testes de segurança.
+        </p>
+        <div class="stat-row reveal">
+          <div class="stat-item">
+            <div class="num">1</div>
+            <div class="label">Rota ativa</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">3</div>
+            <div class="label">Arquivos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="funcionalidades" class="features">
+    <div class="section-label reveal">O que está sendo testado</div>
+    <h2 class="section-title reveal">Funcionalidades</h2>
+    <div class="features-grid">
+
+      <div class="feature-card reveal">
+        <div class="feature-num">01</div>
+        <div class="feature-title">Integridade do Site</div>
+        <p class="feature-desc">A rota principal <code>/</code> retorna o template corretamente via <code>render_template</code>.</p>
+        <span class="feature-arrow">↗</span>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-num">02</div>
+        <div class="feature-title">Arquivos Estáticos</div>
+        <p class="feature-desc">CSS e fontes externas estão sendo servidos e aplicados sem erros pelo servidor.</p>
+        <span class="feature-arrow">↗</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip" id="contato">
+    <h2 class="section-title reveal">Em<br>Operação</h2>
+    <a href="#home" class="btn-dark reveal">↑ Voltar ao topo</a>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Solari4tack</div>
+    <div class="footer-copy">© 2026 · Servidor de Teste · Todos os direitos reservados</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
